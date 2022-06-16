@@ -1,4 +1,4 @@
-# PokeAPP
+# PokeApp-V2
 
 ## Project Setup
 
