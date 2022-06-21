@@ -22,17 +22,25 @@
 </script>
 
 <template>
+	<h1 class="row justify-content-center mt-3 ms-0 me-0 fs-1 text-uppercase fw-bold text-decoration-underline">
+		{{ pokeInfo?.name}}
+	</h1>
 	<div class="flex_box">
-		<div class="item-box mt-4">
+		<div class="item-box">
 			<ul class="list-group">
-				<li class="list-group-item"><u><b>Name</b></u>: {{ pokeInfo?.name}} </li>
-				<li class="list-group-item"><u><b>ID</b></u>: {{ pokeInfo?.id}} </li>
-				<li class="list-group-item">
+				<li class="list-group-item text-capitalize">
+					<u><b>ID</b></u>: {{ pokeInfo?.id}}
+				</li>
+				<li class="list-group-item text-capitalize">
 					<u><b>Type</b></u>: <div style="display: inline-block;" v-for="type in pokeInfo?.types" > {{ type?.type?.name }} &nbsp; </div>
 				</li>
-				<li class="list-group-item"><u><b>Height</b></u>: {{ pokeInfo?.height}} dm</li>
-				<li class="list-group-item"><u><b>Weight</b></u>: {{ pokeInfo?.weight}} hg</li>
-				<li class="list-group-item" v-for="cap in pokeInfo?.abilities">
+				<li class="list-group-item">
+					<u><b>Height</b></u>: {{ pokeInfo?.height}} dm
+				</li>
+				<li class="list-group-item">
+					<u><b>Weight</b></u>: {{ pokeInfo?.weight}} hg
+				</li>
+				<li class="list-group-item text-capitalize" v-for="cap in pokeInfo?.abilities">
 					<u><b>Capacity</b></u>: {{ cap?.ability?.name }} &nbsp;
 				</li>
 			</ul>
